@@ -20,6 +20,6 @@ Tutorials from OpenMined can be found [here](https://github.com/OpenMined/PySyft
 * [Website](https://www.openmined.org/)
 * [Slack](http://slack.openmined.org/) and channel #women-of-om 
 
-## Links
+## Data privacy notes (linked to the book The Algorithmic Foundations of Diﬀerential) 
 Thank you Professor [Joseph Near](https://github.com/jnear) for sharing your notes with us about data privacy! 
 - [Data privacy notes](https://github.com/jnear/cs295-data-privacy/tree/master/notes)
