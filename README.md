@@ -11,4 +11,4 @@ Tutorials from OpenMined can be found [here](https://github.com/OpenMined/PySyft
 
 ## Join OpenMined
 * [Website](https://www.openmined.org/)
-* [Slack](http://slack.openmined.org/)
+* [Slack](http://slack.openmined.org/) and channel #women-of-om 
