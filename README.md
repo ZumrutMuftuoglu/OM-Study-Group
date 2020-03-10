@@ -1,5 +1,7 @@
 # OM-Study-Group
 This group aims to study pysyft tutorial parts and The Algorithmic Foundations of Differential Privacy book chapters. 
+- [Study plan](https://github.com/ZumrutMuftuoglu/OM-Study-Group/blob/master/OM%20Study%20Group_study%20plan.xlsx)
+- [Book: The Algorithmic Foundations of Diﬀerential](https://github.com/ZumrutMuftuoglu/OM-Study-Group/blob/master/privacybook.pdf)
 
 ## OpenMined Tutorials
 Tutorials from OpenMined can be found [here](https://github.com/OpenMined/PySyft/tree/master/examples/tutorials).
