@@ -1,10 +1,13 @@
-# OM-Study-Group
-This group aims to study pysyft tutorial parts and The Algorithmic Foundations of Differential Privacy book chapters. 
-- [Study plan](https://github.com/ZumrutMuftuoglu/OM-Study-Group/blob/master/OM%20Study%20Group_study%20plan.xlsx)
-- [Book: The Algorithmic Foundations of Diﬀerential](https://github.com/ZumrutMuftuoglu/OM-Study-Group/blob/master/privacybook.pdf)
-- [Data privacy notes](https://github.com/jnear/cs295-data-privacy/tree/master/notes)
+# Study Group Om Explorers
+This group aims to study and learn about differential privacy, federated learning and PySyft.
 
-## OpenMined Tutorials
+
+## Join OpenMined
+* [Website](https://www.openmined.org/)
+* [Slack](http://slack.openmined.org/) and channel #sg_om_explorers 
+
+
+## Resources: PySyft (OpenMined Tutorials)
 Tutorials from OpenMined can be found [here](https://github.com/OpenMined/PySyft/tree/master/examples/tutorials).
 |Part | Tutorial | Link |
 |-----|----------|---------|
@@ -17,10 +20,7 @@ Tutorials from OpenMined can be found [here](https://github.com/OpenMined/PySyft
 | 7 | Federated Learning with FederatedDataset | [Part 07](https://github.com/OpenMined/PySyft/blob/master/examples/tutorials/Part%2007%20-%20Federated%20Learning%20with%20Federated%20Dataset.ipynb)
 
 
-## Join OpenMined
-* [Website](https://www.openmined.org/)
-* [Slack](http://slack.openmined.org/) and channel #women-of-om 
-
-## Data privacy notes (linked to the book The Algorithmic Foundations of Diﬀerential) 
+## Resources: Differential Privacy 
 Thank you Professor [Joseph Near](https://github.com/jnear) for sharing your notes with us about data privacy! 
 - [Data privacy notes](https://github.com/jnear/cs295-data-privacy/tree/master/notes)
+- [Book: The Algorithmic Foundations of Diﬀerential](https://github.com/ZumrutMuftuoglu/OM-Study-Group/blob/master/privacybook.pdf)
