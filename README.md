@@ -24,3 +24,4 @@ Tutorials from OpenMined can be found [here](https://github.com/OpenMined/PySyft
 Thank you Professor [Joseph Near](https://github.com/jnear) for sharing your notes with us about data privacy! 
 - [Data privacy notes](https://github.com/jnear/cs295-data-privacy/tree/master/notes)
 - [Book: The Algorithmic Foundations of Diﬀerential](https://github.com/ZumrutMuftuoglu/OM-Study-Group/blob/master/privacybook.pdf)
+- [Udacity course: Secure & Private AI](https://www.udacity.com/course/secure-and-private-ai--ud185)
