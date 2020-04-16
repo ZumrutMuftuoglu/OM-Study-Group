@@ -9,8 +9,12 @@ This group aims to study and learn about differential privacy, federated learnin
 Thank you Professor [Joseph Near](https://github.com/jnear) for sharing your notes with us about data privacy! 
 - [Data privacy notes](https://github.com/jnear/cs295-data-privacy/tree/master/notes)
 - [Book: The Algorithmic Foundations of Diﬀerential](https://github.com/ZumrutMuftuoglu/OM-Study-Group/blob/master/privacybook.pdf)
+- [Book: Differential Privacy From Theory to Practice](https://github.com/ZumrutMuftuoglu/OM-Study-Group/blob/master/Differential%20Privacy%20from%20Theory%20to%20Pratice.pdf)
+-[Book: Differantial Privacy and Applications](https://github.com/ZumrutMuftuoglu/OM-Study-Group/blob/master/DP%20And%20Applications.pdf)
+-[PhD Thesis of Naoise Holohan: Mathematical Foundations of Differantial Privacy](https://github.com/ZumrutMuftuoglu/OM-Study-Group/blob/master/Mathematical%20Foundations%20of%20DP.pdf)
 - [Udacity course: Secure & Private AI](https://www.udacity.com/course/secure-and-private-ai--ud185)
 - [Google Colab Notebook by @Ria: Secure & Private AI course](https://colab.research.google.com/drive/1dmoz1iv5MhY4d1LIgxqE-THzm_CfBxMl)
+- [Intro to DP Presentation by @Zumi](https://github.com/ZumrutMuftuoglu/OM-Study-Group/blob/master/OM_Differential%20Privacy_intro_presentation.pdf)
 
 ## Topics to discuss
 - [Add topics to discuss in this document](https://docs.google.com/document/d/1W9LGurrVzNxkqCydo9jgXOsaAWC85_1JLy0n5Td1hhE/edit?usp=sharing)
