@@ -3,6 +3,7 @@ This group aims to study and learn about differential privacy, federated learnin
 
 ## Join OpenMined
 * [Website](https://www.openmined.org/)
+* [Slack](https://join.slack.com/t/openmined/shared_invite/zt-dog7nfgy-wJGsterDtQvAJydVKihCFA)
 
 ## Resources: Differential Privacy 
 Thank you Professor [Joseph Near](https://github.com/jnear) for sharing your notes with us about data privacy! 
