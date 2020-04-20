@@ -15,6 +15,7 @@ Thank you Professor [Joseph Near](https://github.com/jnear) for sharing your not
 - [Udacity course: Secure & Private AI](https://www.udacity.com/course/secure-and-private-ai--ud185)
 - [Google Colab Notebook by @Ria: Secure & Private AI course](https://colab.research.google.com/drive/1dmoz1iv5MhY4d1LIgxqE-THzm_CfBxMl)
 - [Intro to DP Presentation by @Zumi-12/04/20](https://github.com/ZumrutMuftuoglu/OM-Study-Group/blob/master/OM_Differential%20Privacy_intro_presentation.pdf)
+-[Use cases of Differential Privacy and Federated Learning by @Ria](https://docs.google.com/presentation/d/15Mzb0mGKrBSDULTuha-TXHp-rdHppLi8MQGTuiwfKlU/edit?usp=sharing)
 
 ## Topics to discuss
 - [Add topics to discuss in this document](https://docs.google.com/document/d/1W9LGurrVzNxkqCydo9jgXOsaAWC85_1JLy0n5Td1hhE/edit?usp=sharing)
