@@ -13,15 +13,20 @@ Thank you Professor [Joseph Near](https://github.com/jnear) for sharing your not
 - [Book: Differantial Privacy and Applications](https://github.com/ZumrutMuftuoglu/OM-Study-Group/blob/master/DP%20And%20Applications.pdf)
 - [PhD Thesis of Naoise Holohan: Mathematical Foundations of Differantial Privacy](https://github.com/ZumrutMuftuoglu/OM-Study-Group/blob/master/Mathematical%20Foundations%20of%20DP.pdf)
 - [Udacity course: Secure & Private AI](https://www.udacity.com/course/secure-and-private-ai--ud185)
-- [Google Colab Notebook by @Ria: Secure & Private AI course](https://colab.research.google.com/drive/1dmoz1iv5MhY4d1LIgxqE-THzm_CfBxMl)
 - [Intro to DP Presentation by @Zumi-12/04/20](https://github.com/ZumrutMuftuoglu/OM-Study-Group/blob/master/OM_Differential%20Privacy_intro_presentation.pdf)
 -[Use cases of Differential Privacy and Federated Learning by @Ria](https://docs.google.com/presentation/d/15Mzb0mGKrBSDULTuha-TXHp-rdHppLi8MQGTuiwfKlU/edit?usp=sharing)
+
+## Secure & Private AI Google Colab notebooks by @Ria
+- [Udacity course DP Session 1 notebook](https://colab.research.google.com/drive/14RcH3BjdzVj7Y8YNsXkY97mRZLkyXUgv)
+- [Udacity course DP Session 1 Completed notebook](https://colab.research.google.com/drive/1dmoz1iv5MhY4d1LIgxqE-THzm_CfBxMl)
+- [Udacity course FL Session 2 notebook](https://colab.research.google.com/drive/1is55otRFTfSI7Kg-haZ3IJGew2SjrkP6)
+- [Udacity course FL Session 2 completed notebook](https://colab.research.google.com/drive/1SMPdbG6-uuAPf9yoc3cq9E0JyH2H3IUg)
 
 ## Topics to discuss
 - [Add topics to discuss in this document](https://docs.google.com/document/d/1W9LGurrVzNxkqCydo9jgXOsaAWC85_1JLy0n5Td1hhE/edit?usp=sharing)
 
-## Virtual meetups
-Weekly meetups. Information about timings and invitation link can be found in the study group channel #sg_om_explorers 
+## Join our study group
+Sign up [HERE](https://docs.google.com/forms/d/e/1FAIpQLSfD81R5jwgir5_dfTC4DdIoY2fS7mexKi_T-qt9CZZhz26QpQ/viewform?usp=sf_link)
 
 ## Resources: PySyft (OpenMined Tutorials)
 Tutorials from OpenMined can be found [here](https://github.com/OpenMined/PySyft/tree/master/examples/tutorials).
