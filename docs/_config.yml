@@ -1,7 +1,7 @@
 # Site
 name: "SG OpenMined Explorers Blog"
 title: "SG OpenMined Explorers Blog"
-description: "Jekyll template, Medium styled, free for bloggers."
+description: "A blog to share learnings!"
 logo: 'assets/images/logo.png'
 favicon: 'assets/images/logo.png'
 baseurl: /OM-Study-Group
