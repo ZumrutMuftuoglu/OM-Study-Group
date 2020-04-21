@@ -5,7 +5,7 @@ description: "A blog to share learnings!"
 logo: 'assets/images/logo.png'
 favicon: 'assets/images/logo.png'
 baseurl: /OM-Study-Group
-disqus: 'demowebsite'
+disqus: 'https-zumrutmuftuoglu-github-io-om-study-group'
 include: ["_pages"]
 permalink: /:title/
 
