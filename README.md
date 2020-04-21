@@ -1,6 +1,8 @@
 # Study Group Om Explorers
 This group aims to study and learn about differential privacy, federated learning and PySyft.
 
+Link to Study Group blog: https://zumrutmuftuoglu.github.io/OM-Study-Group/
+
 ## Join OpenMined
 * [Website](https://www.openmined.org/)
 * [Slack](https://join.slack.com/t/openmined/shared_invite/zt-dog7nfgy-wJGsterDtQvAJydVKihCFA)
