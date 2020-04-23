@@ -39,7 +39,7 @@ The benefits associated with Differential Privacy [^fn1]:
   * Balancing Privacy vs. Utility (i.e. considering the accuracy of the results).
   * Only preset queries are allowed with DP approaches such as: ‘return p-value’, ‘return location of top K SNPs’
 
-#### Uber
+#### Uber User Data
 
 Before discussing the use case, let's quickly define the different types of sensitivity for a query.
 
@@ -77,35 +77,68 @@ The authors demonstrate FLEX, a system that utilizes elastic sensitivity. Here a
 
 ![img](https://lh4.googleusercontent.com/RPzHz--3UOg57AP8ucmvBvTsBEsuMGsU7bY8e4CyADltqN1d0BTXaVyFNwoQd77DGnkmszTrQib1Mr-Zr6OzcQwcO2_8mbF4XcaHqKOz8NKWDi2nsdHpTBfDTulzmGrHoJIB)
 
-#### Healthcare + Internet of Things
+#### Healthcare + Internet of Things: Heartrate monitoring
 
-Let's now turn to a healthcare application involving wearable technology and the Internet of Things. the use case here is to collect health data streams measured at fixed intervals (e.g. collecting heart rates measured every minute during business hours) [^fn3] by a device such as a smart watch.
+Let's now turn to a healthcare application involving wearable technology and the Internet of Things. The use case here is to collect health data streams measured at fixed intervals (e.g. collecting heart rates measured every minute during business hours) [^fn3] by a device such as a smart watch.
 
 In the system pipeline described in the corresponding paper, data is perturbed using Local Differential Privacy, where the data contributor adds noise. Per the pipeline shown below, the user's smart watch identifies salient points in the data streams and then peturbs them with noise, followed by sending the noisy data to the server for reconstruction and storage.
 
 ![img](https://lh6.googleusercontent.com/X93uPa9za6kNKEPjejKsQHWMLX7w96gW1yLEj_xERkMiEDrD147G6Fk2buFBtEu2xhMaHahm-5FV8zDwp1RJFaYAywhNlLOBDMXYQzYbdYuSvTWYx8x0XECi7k7WHHMAXprw)
 
 
-#### Healthcare
+#### Biomedical Dataset Analysis
 
-Visualizing or handling large data for biomedical applications with differential privacy guarantees
+For the next use case, we will consider handling large data for biomedical applications with differential privacy guarantees. DAMSEN [^fn4] is a system that supports differential privacy guarantees for numerous data analysis tasks and utilizes a effective query optimization engine to achieve high accuracy and low privacy costs.
 
-...
+As demonstrated in the below figure, DAMSEN [^fn4] offers differential privacy for data analysis tasks, such as histograms, cuboids, machine learning algorithms (e.g. linear and logistic regression, potentially generalizable to neural networks), and clustering tasks.
+
+Note: In the context of data analysis tasks apropos queries, histograms do not represent the traditional visualization of the data distribution. Histograms are a special type of query that involves sorting data points into buckets [^fn11]. You can think of such queries as similar to Pandas' groupby() function. A cuboid is an analysis task that involves multiply summary datasets and tables - please see the DAMSEN paper [^fn4] for detailed examples.
+
+TODO: Picture
+
+TODO: Idea on Visualization
+
+An interesting note is that DAMSEN incorporates a compressive mechanism, which is useful for minimizing the amount of noise needed for DP: 
+
+> *“Instead of adding noise to the original data, CM first encodes the data as in compressive sensing; then, CM adds noise to the encoded data, decodes the result as in compressive sensing, and publishes it. Because the transformed data are highly compressed, they require much less noise to achieve differential privacy.”* [^fn5]
+
+#### Analyzing Electronic Health Records
+
+For this use case, we consider DP-perturbed histograms with Homomorphic Encryption [^fn10]. The system proposed in the paper [^fn10] is depicted in the figure below:
+
+TODO: Figure
+
+The concept of the proposed framework is depicted in the below figure. We can see the parts of the framework required for the homomorphic encryption components for key dissemination and the secure histogram generation. In terms of the DP part of the framework: Encrypted Laplace noises are added to the count of each bin of the histogram, where the sensitive of histogram computation is 1
+The histograms can be used to train models
+Privacy budget needs to be carefully chosen
+Security models prevents against various leakages (please see paper for more details)
+  
 
 
 
 **Differential Privacy References**
 
 [^fn1]: [[1\] Machine learning and genomics: precision medicine versus patient privacy](https://royalsocietypublishing.org/doi/full/10.1098/rsta.2017.0350?url_ver=Z39.88-2003&rfr_id=ori%3Arid%3Acrossref.org&rfr_dat=cr_pub++0pubmed&)
+
 [^fn2]: [[2\] Emerging technologies towards enhancing privacy in genomic data sharing](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-019-1741-0)
+
 [^fn3]: [[3\] Privacy-preserving aggregation of personal health data streams](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0207639)
+
 [^fn4]: [[4\] Demonstration of Damson: Differential Privacy for Analysis of Large Data ](http://differentialprivacy.weebly.com/uploads/9/8/6/2/9862052/pid2574139.pdf)
+
 [^fn5]: [[5\] Compressive Mechanism](https://differentialprivacy.weebly.com/compressive-mechanism.html) 
+
 [^fn6]: [[6\] Project PrivTree: Blurring your “where” for location privacy](https://www.microsoft.com/en-us/research/blog/project-privtree-blurring-location-privacy/)
+
 [^fn7]: [[7\] A History of Census Privacy Protections](https://www.census.gov/library/visualizations/2019/comm/history-privacy-protection.html)
+
 [^fn8]: [[8\] Protecting the Confidentiality of America’s Statistics: Adopting Modern Disclosure Avoidance Methods at the Census Bureau ](https://www.census.gov/newsroom/blogs/research-matters/2018/08/protecting_the_confi.html)
-[^fn9]: [[9\] Towards Practical Differential Privacy for SQL Queries](https://arxiv.org/pdf/1706.09479.pdf)
-[^fn10]: [[10\] Privacy-preserving biomedical data dissemination via a hybrid approach](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6371369/pdf/2977168.pdf)
+
+[^fn9]: [9\] [Towards Practical Differential Privacy for SQL Queries](https://arxiv.org/pdf/1706.09479.pdf)
+
+[^fn10]: [10\] [Privacy-preserving biomedical data dissemination via a hybrid approach](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6371369/pdf/2977168.pdf)
+
+[^fn11]: [11\] [Making Histogram Frequency Distributions in SQL](http://www.silota.com/docs/recipes/sql-histogram-summary-frequency-distribution.html)
 
 Additional resource: [Differential privacy: its technological prescriptive using big data](https://link.springer.com/content/pdf/10.1186/s40537-018-0124-9.pdf)
 
