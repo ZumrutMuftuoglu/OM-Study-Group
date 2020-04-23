@@ -32,24 +32,24 @@ The benefits associated with Differential Privacy [^fn1]:
 * Protects against linkage attacks
 
 * Enables two types of settings:
-- Interactive setting: Query non-public database - answers are injected with noise or only summary statistics are released
-- Non-interactive setting: Public data injected with noise
+  * Interactive setting: Query non-public database - answers are injected with noise or only summary statistics are released
+  * Non-interactive setting: Public data injected with noise
 
 * Disadvantages:
-- Balancing Privacy vs. Utility (i.e. considering the accuracy of the results).
-- Only preset queries are allowed with DP approaches such as: ‘return p-value’, ‘return location of top K SNPs’
+  * Balancing Privacy vs. Utility (i.e. considering the accuracy of the results).
+  * Only preset queries are allowed with DP approaches such as: ‘return p-value’, ‘return location of top K SNPs’
 
 #### Uber
 
 Before discussing the use case, let's quickly define the different types of sensitivity for a query.
 
-##### Definitions of Sensitivity [^fn9]
+##### Definitions of Sensitivity [^fn9]: 
 
-*Sensitivity of a query:* Amount query’s results change when database changes. 
+* *Sensitivity of a query:* Amount query’s results change when database changes. 
 
-*Global sensitivity:* Maximum difference in the query’s result on any two neighboring databases.
+* *Global sensitivity:* Maximum difference in the query’s result on any two neighboring databases.
 
-*Local sensitivity:* Maximum difference between the query’s results on the true database and any neighbor of it. Local sensitivity is often much lower than global sensitivity since it is a property of the single true database rather than the set of all possible databases. Smoothing functions are important to consider.
+* *Local sensitivity:* Maximum difference between the query’s results on the true database and any neighbor of it. Local sensitivity is often much lower than global sensitivity since it is a property of the single true database rather than the set of all possible databases. Smoothing functions are important to consider.
 
 Many differential privacy mechanisms are based on global sensitivity, and do not generalize to joins (since they can multiply input records).
 
@@ -79,12 +79,11 @@ The authors demonstrate FLEX, a system that utilizes elastic sensitivity. Here a
 
 #### Healthcare + Internet of Things
 
-Collect health data streams measured at fixed intervals(e.g. collecting heart rates measured every minute during business hours)3
+Let's now turn to a healthcare application involving wearable technology and the Internet of Things. the use case here is to collect health data streams measured at fixed intervals (e.g. collecting heart rates measured every minute during business hours) [^fn3] by a device such as a smart watch.
 
-Perturb data using Local Differential Privacy, where data contributor adds noise
+In the system pipeline described in the corresponding paper, data is perturbed using Local Differential Privacy, where the data contributor adds noise. Per the pipeline shown below, the user's smart watch identifies salient points in the data streams and then peturbs them with noise, followed by sending the noisy data to the server for reconstruction and storage.
 
 ![img](https://lh6.googleusercontent.com/X93uPa9za6kNKEPjejKsQHWMLX7w96gW1yLEj_xERkMiEDrD147G6Fk2buFBtEu2xhMaHahm-5FV8zDwp1RJFaYAywhNlLOBDMXYQzYbdYuSvTWYx8x0XECi7k7WHHMAXprw)
-
 
 
 #### Healthcare
