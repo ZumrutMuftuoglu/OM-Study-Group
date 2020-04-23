@@ -98,7 +98,7 @@ TODO: Picture
 
 TODO: Idea on Visualization
 
-An interesting note is that DAMSEN incorporates a compressive mechanism, which is useful for minimizing the amount of noise needed for DP: 
+An interesting note is that DAMSEN incorporates a compressive mechanism, which is useful for minimizing the amount of noise needed for DP: TODO: Why minimizing noise is important.
 
 > *“Instead of adding noise to the original data, CM first encodes the data as in compressive sensing; then, CM adds noise to the encoded data, decodes the result as in compressive sensing, and publishes it. Because the transformed data are highly compressed, they require much less noise to achieve differential privacy.”* [^fn5]
 
@@ -108,12 +108,25 @@ For this use case, we consider DP-perturbed histograms with Homomorphic Encrypti
 
 TODO: Figure
 
-The concept of the proposed framework is depicted in the below figure. We can see the parts of the framework required for the homomorphic encryption components for key dissemination and the secure histogram generation. In terms of the DP part of the framework: Encrypted Laplace noises are added to the count of each bin of the histogram, where the sensitive of histogram computation is 1
-The histograms can be used to train models
-Privacy budget needs to be carefully chosen
-Security models prevents against various leakages (please see paper for more details)
-  
+The concept of the proposed framework is depicted in the below figure. We can see the parts of the framework required for the homomorphic encryption components for key dissemination and the secure histogram generation. In terms of the DP part of the framework: Encrypted Laplace noises are added to the count of each bin of the histogram, where the sensitive of histogram computation is 1.
 
+
+The histograms can be used to train models. TODO: Interpreting AUC curve.
+
+Privacy budget needs to be carefully chosen.
+
+Security models prevents against various leakages (please see paper for more details).
+  
+#### Geolocation
+
+#### DP Research Challenges
+(Borrowed from DAMSEN[^fn5])
+
+* “How can we minimize the noise added / maximize the utility of the analysis results?”
+
+* “The privacy budget is a parameter chosen by the data owner that controls the hardness for an attacker to infer sensitive information from the published dataset. Each analysis uses up some of the “privacy budget”. How can we make the budget last as long as possible?”
+
+* Question to the reader: Are there any other research challenges to consider?
 
 
 **Differential Privacy References**
