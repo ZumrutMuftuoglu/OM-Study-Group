@@ -6,60 +6,74 @@ categories: [ differential-privacy, application ]
 image: assets/images/13.jpg
 ---
 
-In this blog post, we will cover use cases of differential privacy ranging from healthcare to geolocation. For the slide deck associated with this post, please see [Use cases of Differential Privacy and Federated Learning by @Ria](https://docs.google.com/presentation/d/15Mzb0mGKrBSDULTuha-TXHp-rdHppLi8MQGTuiwfKlU/edit?usp=sharing)
+In this blog post, we will cover use cases of differential privacy (DP) ranging from healthcare to geolocation. For the slide deck associated with this post, please see [Use cases of Differential Privacy and Federated Learning by @Ria](https://docs.google.com/presentation/d/15Mzb0mGKrBSDULTuha-TXHp-rdHppLi8MQGTuiwfKlU/edit?usp=sharing)
 
 #### Genomics
 
-Biggest risk: linkage attacks using auxiliary information
+Machine learning has important implications for genomics applications, such as for precision medicine (i.e. treatment  tailored to a patient's clinical/genetic features) [^fn1] and detecting fine-grained insights in data collected from a diverse population [^fn2].
 
-> *“It has been demonstrated that even coarse-level information such as minor allele frequencies (MAF) can reveal whether a given individual is part of the study cohort, potentially disclosing sensitive clinical phenotypes of the individual.”* [^fn1]
+Given the rapid creation of numerous genomics datasets to fuel statistical analyses and machine learning research for these applications, one of the primary privacy risks for such an application are linkage attacks using auxiliary information. Linkage attacks involve exploiting the scenario where information in a public database overlaps with a sensitive dataset (which is usually anonymized/de-identified to censor the dataset). We'll cover de-identification and k-anonymization in a moment. 
 
+There are many illustrated examples of linkage attacks, such as a linkage attack being deployed on de-identified hospital records and a voter registration database to find fhe Governor of Massachusetts's patient profile [^fn2].
 
+Furthermore, consider the following quote: 
 
-Prior solutions[^fn2]:
+> *“It has been demonstrated that even coarse-level information such as minor allele frequencies (MAF) can reveal whether a given individual is part of the study cohort, potentially disclosing sensitive clinical phenotypes of the individual.”* [^fn2]
 
-- De-identification: lose meaningful info
-- K-anonymization: offers no formal privacy guarantees
+This is concerning in light of genetic discrimination, where individuals can be treated differently because they might have a genetic mutation [^fn1].
 
-The benefits associated with Differential Privacy [^fn2]:
+Prior solutions to this issue include [^fn1]:
 
-- Protects against linkage attacks
+- De-identification, which involes removing unique identifiers from the data such as names, phone numbers, and even vehicle identifiers. The disadvantage of this approach is that you could lose meaningful information.
+- K-anonymization, which involves removing information from the released data until a data record belong in the same equicalenc class as at least (k − 1) other records. The disadvantage of this approach is that it offers no formal privacy guarantees and is vulnerable to linkage attacks, among other attacks. 
+
+The benefits associated with Differential Privacy [^fn1]:
+
+* Protects against linkage attacks
+
+* Enables two types of settings:
 - Interactive setting: Query non-public database - answers are injected with noise or only summary statistics are released
 - Non-interactive setting: Public data injected with noise
-- Disadvantage: Privacy vs. Utility
-- Only preset queries allowed: ‘return p-value’, ‘return location of top K SNPs’
+
+* Disadvantages:
+- Balancing Privacy vs. Utility (i.e. considering the accuracy of the results).
+- Only preset queries are allowed with DP approaches such as: ‘return p-value’, ‘return location of top K SNPs’
 
 #### Uber
 
-##### Definitions of Sensitivity
+Before discussing the use case, let's quickly define the different types of sensitivity for a query.
+
+##### Definitions of Sensitivity [^fn9]
 
 *Sensitivity of a query:* Amount query’s results change when database changes. 
+
 *Global sensitivity:* Maximum difference in the query’s result on any two neighboring databases.
-*Local sensitivity:* Maximum difference between the query’s results on the true database and any neighbor of it.Local sensitivity is often much lower than global sensitivity since it is a property of the single true database rather than the set of all possible databases.Smoothing functions are important.
+
+*Local sensitivity:* Maximum difference between the query’s results on the true database and any neighbor of it. Local sensitivity is often much lower than global sensitivity since it is a property of the single true database rather than the set of all possible databases. Smoothing functions are important to consider.
+
 Many differential privacy mechanisms are based on global sensitivity, and do not generalize to joins (since they can multiply input records).
+
 Techniques using local sensitivity often provide greater utility, but are computationally infeasible.
 
 ##### Use case
 
-Example: Determine average trip distance[^fn9]
+For this use case, a sample application by Uber is to determine average trip distance for users [^fn9]. Smaller cities might have fewer trips so an individual trip is likely to influence the analysis, which differential privacy can help address.
 
-The authors propose Elastic Sensitivity as a method to leverage local sensitivity.
+Per the notes frmo the previous section, it is valuable to consider local sensitivity given global sensitivity-based DP mechanisms do not geeneralize to joins. The below image from the paper "Towards Practical Differential Privacy for SQL Queries" [^fn9] shows a large number of queries utilize joins, which motivates the need for a method that takes advantage of local sensitivity. Side note: I highly recommend reading the paper "Towards Practical Differential Privacy for SQL Queries" for similar analyses of queries, and a detailed definition of Elastic Sensitivity.
 
-smaller cities might have fewer trips so an individual trip is likely to influence the analysis more
+![img](https://lh6.googleusercontent.com/DpeS5uq9fjKTlT9lG5Ke4hFnF-MxzS5iiG4ospYsCwrrDpU_jF4EktuYVlEEPRCbL_VxTIaMuYTzTAsMXpFCW8VrT54q8W5RuOJoJa0sZWXqavXPPhg5P3Rk1m4I2JXUWWH_)
 
-The purpose is to “model the impact of each join in the query using precomputed metrics about the frequency of join keys in the true database”.
+The authors propose Elastic Sensitivity as a method to leverage local sensitivity. The purpose of the approach is to “model the impact of each join in the query using precomputed metrics about the frequency of join keys in the true database”. Please see the below table for a comparison between Elastic Sensitivity with other DP mechanisms - we see Elastic Sensitivity supports different types of equijoins, which "are joins that are conditioned on value equality of one column from both relations."
 
-The authors demonstrate FLEX, a system that utilizes elastic sensitivity; benefits described in the paper:
+
+![img](https://lh5.googleusercontent.com/-UMB6w6XmQNrGoXobcn4Mo1mzDFD27ymYVnuWwDKCBQMTYfXoyTuGFiioNHtKOhXIPtcsVxad9tT1vAycO5ULQoG34SloBxVuYZh5H3pbVUgbmIN3mebudaS-6BYiFjR2heT)
+
+
+The authors demonstrate FLEX, a system that utilizes elastic sensitivity. Here are the benefits described in the paper:
 
 - Provides (ε, δ)-differential privacy and does not need to interact with the database.
 - Only requires static analysis of the query and post-processing of the query results.
 - Scales to big data while incurring minimal performance overhead.
-
-![img](https://lh6.googleusercontent.com/DpeS5uq9fjKTlT9lG5Ke4hFnF-MxzS5iiG4ospYsCwrrDpU_jF4EktuYVlEEPRCbL_VxTIaMuYTzTAsMXpFCW8VrT54q8W5RuOJoJa0sZWXqavXPPhg5P3Rk1m4I2JXUWWH_)
-
-![img](https://lh5.googleusercontent.com/-UMB6w6XmQNrGoXobcn4Mo1mzDFD27ymYVnuWwDKCBQMTYfXoyTuGFiioNHtKOhXIPtcsVxad9tT1vAycO5ULQoG34SloBxVuYZh5H3pbVUgbmIN3mebudaS-6BYiFjR2heT)
-
-*Definition: “equijoins are joins that are conditioned on value equality of one column from both relations.”*
 
 ![img](https://lh4.googleusercontent.com/RPzHz--3UOg57AP8ucmvBvTsBEsuMGsU7bY8e4CyADltqN1d0BTXaVyFNwoQd77DGnkmszTrQib1Mr-Zr6OzcQwcO2_8mbF4XcaHqKOz8NKWDi2nsdHpTBfDTulzmGrHoJIB)
 
