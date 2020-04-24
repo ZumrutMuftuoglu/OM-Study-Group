@@ -10,15 +10,15 @@ In this blog post, we will cover use cases of differential privacy (DP) ranging 
 
 #### Genomics
 
-Machine learning has important implications for genomics applications, such as for precision medicine (i.e., treatment tailored to a patient's clinical/genetic features) <sup id="a1">[1](#f1)</sup> and detecting fine-grained insights in data collected from a diverse population [^fn2].
+Machine learning has important implications for genomics applications, such as for precision medicine (i.e., treatment tailored to a patient's clinical/genetic features) <sup id="a1">[1](#f1)</sup> and detecting fine-grained insights in data collected from a diverse population <sup id="a2">[2](#f2)</sup>.
 
 Given the rapid creation of numerous genomics datasets to fuel statistical analyses and machine learning research for these applications, one of the primary privacy risks for such an application are linkage attacks using auxiliary information. Linkage attacks involve exploiting the scenario where information in a public database overlaps with a sensitive dataset (which is usually anonymized/de-identified to censor the dataset). We'll cover de-identification and k-anonymization in a moment. 
 
-There are many illustrated examples of linkage attacks, such as a linkage attack being deployed on de-identified hospital records and a voter registration database which resulted in successfully finding the Governor of Massachusetts's patient profile [^fn2].
+There are many illustrated examples of linkage attacks, such as a linkage attack being deployed on de-identified hospital records and a voter registration database which resulted in successfully finding the Governor of Massachusetts's patient profile <sup id="a2">[2](#f2)</sup>.
 
 Furthermore, consider the following quote: 
 
-> *“It has been demonstrated that even coarse-level information such as minor allele frequencies (MAF) can reveal whether a given individual is part of the study cohort, potentially disclosing sensitive clinical phenotypes of the individual.”* [^fn2]
+> *“It has been demonstrated that even coarse-level information such as minor allele frequencies (MAF) can reveal whether a given individual is part of the study cohort, potentially disclosing sensitive clinical phenotypes of the individual.”* <sup id="a2">[2](#f2)</sup>
 
 This is concerning in light of genetic discrimination, where individuals can be treated differently because they might have a genetic mutation <sup id="a1">[1](#f1)</sup>.
 
@@ -43,7 +43,7 @@ The benefits associated with Differential Privacy <sup id="a1">[1](#f1)</sup>:
 
 Before discussing the use case, let's quickly define the different types of sensitivity for a query.
 
-##### Definitions of Sensitivity [^fn9]: 
+##### Definitions of Sensitivity <sup id="a9">[9](#f9)</sup>: 
 
 * *Sensitivity of a query:* Amount query’s results change when database changes. 
 
@@ -57,11 +57,11 @@ Techniques using local sensitivity often provide greater utility, but are comput
 
 ##### Use case
 
-For this use case, let's consider a sample application by Uber - determine the average trip distance for users [^fn9]. Smaller cities might have fewer trips, so an individual trip is likely to influence the analysis, which differential privacy can help address.
+For this use case, let's consider a sample application by Uber - determine the average trip distance for users <sup id="a7">[9](#f9)</sup>. Smaller cities might have fewer trips, so an individual trip is likely to influence the analysis, which differential privacy can help address.
 
-Per the notes from the previous section, it is valuable to consider local sensitivity given global sensitivity-based DP mechanisms do not generalize to joins. The below image from the paper "Towards Practical Differential Privacy for SQL Queries" [^fn9] shows a large number of queries utilize joins, which motivates the need for a method that takes advantage of local sensitivity. 
+Per the notes from the previous section, it is valuable to consider local sensitivity given global sensitivity-based DP mechanisms do not generalize to joins. The below image from the paper "Towards Practical Differential Privacy for SQL Queries" <sup id="a7">[9](#f9)</sup> shows a large number of queries utilize joins, which motivates the need for a method that takes advantage of local sensitivity. 
 
-**Side note:** I highly recommend reading the paper "Towards Practical Differential Privacy for SQL Queries" [^fn9] (link in the References) for similar analyses of queries, and a detailed definition of Elastic Sensitivity.
+**Side note:** I highly recommend reading the paper "Towards Practical Differential Privacy for SQL Queries" <sup id="a7">[9](#f9)</sup> (link in the References) for similar analyses of queries, and a detailed definition of Elastic Sensitivity.
 
 ![img](https://lh6.googleusercontent.com/DpeS5uq9fjKTlT9lG5Ke4hFnF-MxzS5iiG4ospYsCwrrDpU_jF4EktuYVlEEPRCbL_VxTIaMuYTzTAsMXpFCW8VrT54q8W5RuOJoJa0sZWXqavXPPhg5P3Rk1m4I2JXUWWH_)
 
@@ -81,7 +81,7 @@ The authors demonstrate FLEX, a system that utilizes elastic sensitivity, depict
 
 #### Healthcare + Internet of Things: Heartrate monitoring
 
-Let's now turn to a healthcare application involving wearable technology and the Internet of Things. The use case here is to collect health data streams measured at fixed intervals (e.g. collecting heart rates measured every minute during business hours) [^fn3] by a device such as a smart watch.
+Let's now turn to a healthcare application involving wearable technology and the Internet of Things. The use case here is to collect health data streams measured at fixed intervals (e.g. collecting heart rates measured every minute during business hours) <sup id="a3">[3](#f3)</sup> by a device such as a smart watch.
 
 In the system pipeline described in the corresponding paper, data is perturbed using Local Differential Privacy, where the data contributor adds noise. Per the pipeline shown below, the user's smart watch identifies salient points in the data streams and then perturbs them with noise, followed by sending the noisy data to the server for reconstruction and storage.
 
@@ -90,25 +90,25 @@ In the system pipeline described in the corresponding paper, data is perturbed u
 
 #### Biomedical Dataset Analysis
 
-For the next use case, we will consider handling large data for biomedical applications with differential privacy guarantees. DAMSEN [^fn4] is a system that supports differential privacy guarantees for numerous data analysis tasks and utilizes a effective query optimization engine to achieve high accuracy and low privacy costs.
+For the next use case, we will consider handling large data for biomedical applications with differential privacy guarantees. DAMSEN <sup id="a4">[4](#f4)</sup> is a system that supports differential privacy guarantees for numerous data analysis tasks and utilizes a effective query optimization engine to achieve high accuracy and low privacy costs.
 
-As demonstrated in the below figure, DAMSEN [^fn4] offers differential privacy for data analysis tasks, such as histograms, cuboids, machine learning algorithms (e.g. linear and logistic regression, potentially generalizable to neural networks), and clustering tasks.
+As demonstrated in the below figure, DAMSEN <sup id="a4">[4](#f4)</sup> offers differential privacy for data analysis tasks, such as histograms, cuboids, machine learning algorithms (e.g. linear and logistic regression, potentially generalizable to neural networks), and clustering tasks.
 
-Note: In the context of data analysis tasks apropos queries, histograms do not represent the traditional visualization of the data distribution. Histograms are a special type of query that involves sorting data points into buckets [^fn11]. You can think of such queries as similar to Pandas' groupby() function with more functionality. A cuboid is an analysis task that involves multiply summary datasets and tables - please see the DAMSEN paper [^fn4] for detailed examples.
+Note: In the context of data analysis tasks apropos queries, histograms do not represent the traditional visualization of the data distribution. Histograms are a special type of query that involves sorting data points into buckets <sup id="a11">[11](#f11)</sup>. You can think of such queries as similar to Pandas' groupby() function with more functionality. A cuboid is an analysis task that involves multiply summary datasets and tables - please see the DAMSEN paper <sup id="a4">[4](#f4)</sup> for detailed examples.
 
 ![img](https://lh3.googleusercontent.com/A9sHW1JNxeN-Tb4kDmyJlm6lTPmtYDfKIvwbIlW_YJbGPLZvTQbBkmVEWr3FqTS6Suj7OGoIMcOUF-srj2DN7gihQHs8pFhK_qFtLlRTkpqAXiN8sOFVKv6HfH-MdRM93f-p9v0-hfE)
 
-**Potential Project Idea: ** Ensure differential privacy guarantees for visualizations. Two resources I have found on the topic are ["Privacy-aware Visualization of Personal Data"](<https://users.cs.duke.edu/~hexi88/privacy-aware_visualization/index.html>) [^fn12] and ["Challenges of Visualizing Differentially Private Data"](<https://people.cs.umass.edu/~miklau/assets/pubs/viz/zhang16challenges.pdf>) [^fn13].
+**Potential Project Idea: ** Ensure differential privacy guarantees for visualizations. Two resources I have found on the topic are ["Privacy-aware Visualization of Personal Data"](<https://users.cs.duke.edu/~hexi88/privacy-aware_visualization/index.html>) <sup id="a12">[12](#f12)</sup> and ["Challenges of Visualizing Differentially Private Data"](<https://people.cs.umass.edu/~miklau/assets/pubs/viz/zhang16challenges.pdf>) <sup id="a13">[13](#f13)</sup>.
 
 An interesting note is that DAMSEN incorporates a compressive mechanism, which is useful for minimizing the amount of noise needed for DP: 
 
-> *“Instead of adding noise to the original data, CM first encodes the data as in compressive sensing; then, CM adds noise to the encoded data, decodes the result as in compressive sensing, and publishes it. Because the transformed data are highly compressed, they require much less noise to achieve differential privacy.”* [^fn5]
+> *“Instead of adding noise to the original data, CM first encodes the data as in compressive sensing; then, CM adds noise to the encoded data, decodes the result as in compressive sensing, and publishes it. Because the transformed data are highly compressed, they require much less noise to achieve differential privacy.”* <sup id="a5">[5](#f5)</sup>
 
 It is important to reduce the amount of noise because we would like to ensure the query results perturbed by the DP mechanism are still as accurate as possible.
 
 #### Analyzing Electronic Health Records
 
-For this use case, we consider DP-perturbed histograms with Homomorphic Encryption [^fn10]. The overall system proposed in the paper [^fn10] is depicted in the figure below:
+For this use case, we consider DP-perturbed histograms with Homomorphic Encryption <sup id="a10">[10](#f10)</sup>. The overall system proposed in the paper <sup id="a10">[10](#f10)</sup> is depicted in the figure below:
 
 ![img](https://lh5.googleusercontent.com/78E7aRmA9KiMjJxwk_H7JRmi-u_wny-0CixOgHAmai3UuMDbsA9i4wWEQyJf_nBQ_paBsXcg4_oz2mR6hhPoeZhWDICQb4CJoKatUiquNvsU8CgInijJLHzLP7Gm6wWZtXh6OeM066s)
 
@@ -128,7 +128,7 @@ Therefore, one of the authors' conclusion is that the privacy budget needs to be
 
 #### Geolocation
 
-Microsoft's PrivTree system utilizes differential privacy to mask the location of individuals in their geolocation databases. The approach involves  the partitioning of a map into sub-regions, followed by applying location perturbation to each subregion, as demonstrated in the figures below. Their system, given the original data and a few other parameters (the scale of Laplacian noise to be used, a threshold used to decide whether the splitting of a node should occur, etc.), can implement a differentially private algorithm and output noisy data for almost any kind of location data.
+Microsoft's PrivTree system <sup id="a6">[6](#f6)</sup> utilizes differential privacy to mask the location of individuals in their geolocation databases. The approach involves  the partitioning of a map into sub-regions, followed by applying location perturbation to each subregion, as demonstrated in the figures below. Their system, given the original data and a few other parameters (the scale of Laplacian noise to be used, a threshold used to decide whether the splitting of a node should occur, etc.), can implement a differentially private algorithm and output noisy data for almost any kind of location data.
 
 ![img](https://lh5.googleusercontent.com/hxI2mTyYD1MTfATSog1nw14ZN6d-UtcNZCA9gVTGIhWRahe4ZHiz_Xpj0CYNJ8HjN3MAfG0MvcEkqEes-Bakbmc1Nz4y3YRbq43Gki4hgWbcWZBaJxBwwRvkWCe3jOCdCfibAx9N4tE)![img](https://lh4.googleusercontent.com/W_mLv-RTsdRLo7zEC2BnhCFDR71BweWYYNsTJNeyElSRecHVW0WpHe8_AwPEAcw02a3gjc5yT4KIYVlQ053_JHYpDN9lyrULfOCu67Ea5W7tbz7PhaQ-5FyNsp_Khokbm0sNR8MXmwY)
 
@@ -136,7 +136,7 @@ Microsoft's PrivTree system utilizes differential privacy to mask the location o
 
 #### U.S. Census Bureau
 
-An interesting use case that we will only cover briefly is the U.S. Census Bureau's decision to incorporate differential privacy as part of their privacy strategy. Per the figure below, they intend to adopt differential privacy through the "world's first large-scale application of new privacy system" in 2020.
+An interesting use case that we will only cover briefly is the U.S. Census Bureau's decision to incorporate differential privacy as part of their privacy strategy <sup id="a7">[7](#f7)</sup>, <sup id="a8">[8](#f8)</sup>. Per the figure below, they intend to adopt differential privacy through the "world's first large-scale application of new privacy system" in 2020.
 
 
 
@@ -144,7 +144,7 @@ An interesting use case that we will only cover briefly is the U.S. Census Burea
 
 #### DP Research Challenges
 
-Let's consider a few research challenges (Borrowed from DAMSEN[^fn5]) that are common to the use cases we have discussed in this blog post:
+Let's consider a few research challenges (Borrowed from DAMSEN<sup id="a5">[5](#f5)</sup>) that are common to the use cases we have discussed in this blog post:
 
 * “How can we minimize the noise added / maximize the utility of the analysis results?”
 
