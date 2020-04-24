@@ -15,7 +15,8 @@ Please see this tutorial if you haven't forked a git repo before or made a pull 
 * Change title to the title of your blog post
 * Change author to your name in undercase
 * Change categories to a relevant tag for your article (e.g. differential-privacy, or federated-learning)
-* Change image to the filepath for the relevant image for your article. Before you do this, please make sure to navigate to the assets/images/ directory, and add your .JPG or .PNG File there.
+* Change image to the filepath for the relevant image for your article. Before you do this, please make sure to navigate to the assets/images/ directory, and add your .JPG or .PNG File there. Please make sure the image dimensions are around 750 x 500.
+
 * Below the second --- line, replace the dummy text "Hello, this is our first post on the website!" with the content of your blog post. 
 
 For the blog posts, we are working with Markdown files. See this guide by Github if you're unfamiliar with how to write content in Markdown files: [Mastering Markdown](https://guides.github.com/features/mastering-markdown/)
