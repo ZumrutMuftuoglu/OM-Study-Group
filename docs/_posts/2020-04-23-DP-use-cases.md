@@ -8,7 +8,6 @@ featured: true
 hidden: true
 ---
 
-
 Hello! In this blog post, we will cover use cases of differential privacy (DP) ranging from biomedical dataset analysis to geolocation. For the slide deck associated with this post, please see [Use cases of Differential Privacy and Federated Learning by @Ria](https://docs.google.com/presentation/d/15Mzb0mGKrBSDULTuha-TXHp-rdHppLi8MQGTuiwfKlU/edit?usp=sharing). 
 
 Let's start with the application of differential privacy for genomics.
@@ -39,7 +38,6 @@ The benefits associated with Differential Privacy <sup id="a1">[1](#f1)</sup>:
 * Enables two types of settings:
   * Interactive setting, where you can query non-public database - answers are injected with noise or only summary statistics are released
   * Non-interactive setting, where the public data is injected with noise
-
 
 The disadvantages associated with DP for this application:
 
@@ -76,7 +74,6 @@ The authors propose Elastic Sensitivity as a method to leverage local sensitivit
 
 <img src="https://lh5.googleusercontent.com/-UMB6w6XmQNrGoXobcn4Mo1mzDFD27ymYVnuWwDKCBQMTYfXoyTuGFiioNHtKOhXIPtcsVxad9tT1vAycO5ULQoG34SloBxVuYZh5H3pbVUgbmIN3mebudaS-6BYiFjR2heT" width="500" align="center">
 
-
 The authors demonstrate FLEX, a system that utilizes elastic sensitivity, depicted in the figure below. Here are the benefits described in the paper:
 
 - Provides (ε, δ)-differential privacy and does not need to interact with the database.
@@ -84,7 +81,6 @@ The authors demonstrate FLEX, a system that utilizes elastic sensitivity, depict
 - Scales to big data while incurring minimal performance overhead.
 
 <img src="https://lh4.googleusercontent.com/RPzHz--3UOg57AP8ucmvBvTsBEsuMGsU7bY8e4CyADltqN1d0BTXaVyFNwoQd77DGnkmszTrQib1Mr-Zr6OzcQwcO2_8mbF4XcaHqKOz8NKWDi2nsdHpTBfDTulzmGrHoJIB" width="500" align="center">
-
 
 
 #### Healthcare + Internet of Things: Heartrate monitoring
