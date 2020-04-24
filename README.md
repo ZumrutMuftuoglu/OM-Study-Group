@@ -3,6 +3,8 @@ This group aims to study and learn about differential privacy, federated learnin
 
 Link to Study Group blog: https://zumrutmuftuoglu.github.io/OM-Study-Group/
 
+Please see instructions_write_blog_post.md in the repo on instructions on how to write a blog post on the Study Group blog.
+
 ## Join OpenMined
 * [Website](https://www.openmined.org/)
 * [Slack](https://join.slack.com/t/openmined/shared_invite/zt-dog7nfgy-wJGsterDtQvAJydVKihCFA)
