@@ -98,7 +98,7 @@ Note: In the context of data analysis tasks apropos queries, histograms do not r
 
 <img src="https://lh3.googleusercontent.com/A9sHW1JNxeN-Tb4kDmyJlm6lTPmtYDfKIvwbIlW_YJbGPLZvTQbBkmVEWr3FqTS6Suj7OGoIMcOUF-srj2DN7gihQHs8pFhK_qFtLlRTkpqAXiN8sOFVKv6HfH-MdRM93f-p9v0-hfE" width="5000">
 
-**Potential Project Idea: ** Ensure differential privacy guarantees for visualizations. Two resources I have found on the topic are ["Privacy-aware Visualization of Personal Data"](<https://users.cs.duke.edu/~hexi88/privacy-aware_visualization/index.html>) <sup id="a12">[12](#f12)</sup> and ["Challenges of Visualizing Differentially Private Data"](<https://people.cs.umass.edu/~miklau/assets/pubs/viz/zhang16challenges.pdf>) <sup id="a13">[13](#f13)</sup>.
+**Potential Project Idea:** Ensure differential privacy guarantees for visualizations. Two resources I have found on the topic are ["Privacy-aware Visualization of Personal Data"](<https://users.cs.duke.edu/~hexi88/privacy-aware_visualization/index.html>) <sup id="a12">[12](#f12)</sup> and ["Challenges of Visualizing Differentially Private Data"](<https://people.cs.umass.edu/~miklau/assets/pubs/viz/zhang16challenges.pdf>) <sup id="a13">[13](#f13)</sup>.
 
 An interesting note is that DAMSEN incorporates a compressive mechanism, which is useful for minimizing the amount of noise needed for DP: 
 
