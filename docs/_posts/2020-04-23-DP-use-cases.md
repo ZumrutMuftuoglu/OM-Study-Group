@@ -154,29 +154,31 @@ Let's consider a few research challenges (Borrowed from DAMSEN<sup id="a5">[5](#
 
 **Differential Privacy References**
 
-[^]: `1. <small id="f1">`[[1\] Machine learning and genomics: precision medicine versus patient privacy ](https://royalsocietypublishing.org/doi/full/10.1098/rsta.2017.0350?url_ver=Z39.88-2003&rfr_id=ori%3Arid%3Acrossref.org&rfr_dat=cr_pub++0pubmed&) 
+1. <small id="f1">[Machine learning and genomics: precision medicine versus patient privacy ](https://royalsocietypublishing.org/doi/full/10.1098/rsta.2017.0350?url_ver=Z39.88-2003&rfr_id=ori%3Arid%3Acrossref.org&rfr_dat=cr_pub++0pubmed&) </small> [↩](#a1)
 
-[^fn2]: [[2\] Emerging technologies towards enhancing privacy in genomic data sharing](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-019-1741-0)
+2. <small id="f2">[Emerging technologies towards enhancing privacy in genomic data sharing](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-019-1741-0) </small> [↩](#a2)
 
-[^fn3]: [[3\] Privacy-preserving aggregation of personal health data streams](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0207639)
+3. <small id="f3">[Privacy-preserving aggregation of personal health data streams](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0207639) </small> [↩](#a3)
 
-[^fn4]: [[4\] Demonstration of Damson: Differential Privacy for Analysis of Large Data ](http://differentialprivacy.weebly.com/uploads/9/8/6/2/9862052/pid2574139.pdf)
+4. <small id="f4">[Demonstration of Damson: Differential Privacy for Analysis of Large Data ](http://differentialprivacy.weebly.com/uploads/9/8/6/2/9862052/pid2574139.pdf) </small> [↩](#a4)
 
-[^fn5]: [[5\] Compressive Mechanism](https://differentialprivacy.weebly.com/compressive-mechanism.html) 
+5. <small id="f5">[Compressive Mechanism](https://differentialprivacy.weebly.com/compressive-mechanism.html)  </small> [↩](#a5)
 
-[^fn6]: [[6\] Project PrivTree: Blurring your “where” for location privacy](https://www.microsoft.com/en-us/research/blog/project-privtree-blurring-location-privacy/)
+6. <small id="f6">[Project PrivTree: Blurring your “where” for location privacy](https://www.microsoft.com/en-us/research/blog/project-privtree-blurring-location-privacy/) </small> [↩](#a6)
 
-[^fn7]: [[7\] A History of Census Privacy Protections](https://www.census.gov/library/visualizations/2019/comm/history-privacy-protection.html)
+7. <small id="f7">[A History of Census Privacy Protections](https://www.census.gov/library/visualizations/2019/comm/history-privacy-protection.html) </small> [↩](#a7)
 
-[^fn8]: [[8\] Protecting the Confidentiality of America’s Statistics: Adopting Modern Disclosure Avoidance Methods at the Census Bureau ](https://www.census.gov/newsroom/blogs/research-matters/2018/08/protecting_the_confi.html)
+8. <small id="f8">[Protecting the Confidentiality of America’s Statistics: Adopting Modern Disclosure Avoidance Methods at the Census Bureau ](https://www.census.gov/newsroom/blogs/research-matters/2018/08/protecting_the_confi.html) </small> [↩](#a8)
 
-[^fn9]: [9\] [Towards Practical Differential Privacy for SQL Queries](https://arxiv.org/pdf/1706.09479.pdf)
+9. <small id="f9">[Towards Practical Differential Privacy for SQL Queries](https://arxiv.org/pdf/1706.09479.pdf) </small> [↩](#a9)
 
-[^fn10]: [10\] [Privacy-preserving biomedical data dissemination via a hybrid approach](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6371369/pdf/2977168.pdf)
+10. <small id="f10">[Privacy-preserving biomedical data dissemination via a hybrid approach](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6371369/pdf/2977168.pdf) </small> [↩](#a10)
 
-[^fn11]: [11\] [Making Histogram Frequency Distributions in SQL](http://www.silota.com/docs/recipes/sql-histogram-summary-frequency-distribution.html)
-[^fn12]: [12] "Privacy-aware Visualization of Personal Data"](<https://users.cs.duke.edu/~hexi88/privacy-aware_visualization/index.html>)
-[^fn13]: [13] "Challenges of Visualizing Differentially Private Data"](<https://people.cs.umass.edu/~miklau/assets/pubs/viz/zhang16challenges.pdf>).
+11. <small id="f11">[Making Histogram Frequency Distributions in SQL](http://www.silota.com/docs/recipes/sql-histogram-summary-frequency-distribution.html) </small> [↩](#a11)
+
+12. <small id="f12">["Privacy-aware Visualization of Personal Data"](<https://users.cs.duke.edu/~hexi88/privacy-aware_visualization/index.html>) </small> [↩](#a12)
+
+13. <small id="13">["Challenges of Visualizing Differentially Private Data"](<https://people.cs.umass.edu/~miklau/assets/pubs/viz/zhang16challenges.pdf>) </small> [↩](#a13)
 
 Additional resource: [Differential privacy: its technological prescriptive using big data](https://link.springer.com/content/pdf/10.1186/s40537-018-0124-9.pdf)
 
