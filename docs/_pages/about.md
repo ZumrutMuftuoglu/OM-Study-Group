@@ -10,9 +10,10 @@ comments: true
 
 <p>Hello! This is the blogging website of the SG OpenMined (OM) Explorers study group, where members can write blogs to share what they are learning.
 
-If you would like to join the study group sign up [here](https://docs.google.com/forms/d/e/1FAIpQLSfD81R5jwgir5_dfTC4DdIoY2fS7mexKi_T-qt9CZZhz26QpQ/viewform?usp=sf_link).
+If you would like to join the study group sign up <a href="https://docs.google.com/forms/d/e/1FAIpQLSfD81R5jwgir5_dfTC4DdIoY2fS7mexKi_T-qt9CZZhz26QpQ/viewform?usp=sf_link">here.</a>
 
-Check out our GitHub repo [here](https://github.com/ZumrutMuftuoglu/OM-Study-Group).
+Check out our GitHub repo <a href="https://github.com/ZumrutMuftuoglu/OM-Study-Group">here.</a>
+
 
 </p>
 
