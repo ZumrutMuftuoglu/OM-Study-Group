@@ -3,7 +3,9 @@ layout: post
 title:  "Use Cases of Differential Privacy"
 author: ria
 categories: [ differential-privacy, application ]
-image: assets/images/uber-use-case.JPG
+image: assets/images/uber-use-case.jpg
+featured: true
+hidden: true
 ---
 
 
@@ -68,11 +70,11 @@ Per the notes from the previous section, it is valuable to consider local sensit
 
 **Side note:** I highly recommend reading the paper "Towards Practical Differential Privacy for SQL Queries" <sup id="a7">[9](#f9)</sup> (link in the References) for similar analyses of queries, and a detailed definition of Elastic Sensitivity.
 
-<img src="https://lh6.googleusercontent.com/DpeS5uq9fjKTlT9lG5Ke4hFnF-MxzS5iiG4ospYsCwrrDpU_jF4EktuYVlEEPRCbL_VxTIaMuYTzTAsMXpFCW8VrT54q8W5RuOJoJa0sZWXqavXPPhg5P3Rk1m4I2JXUWWH_" width="500">
+<img src="https://lh6.googleusercontent.com/DpeS5uq9fjKTlT9lG5Ke4hFnF-MxzS5iiG4ospYsCwrrDpU_jF4EktuYVlEEPRCbL_VxTIaMuYTzTAsMXpFCW8VrT54q8W5RuOJoJa0sZWXqavXPPhg5P3Rk1m4I2JXUWWH_" width="500" align="center">
 
 The authors propose Elastic Sensitivity as a method to leverage local sensitivity. The purpose of the approach is to “model the impact of each join in the query using precomputed metrics about the frequency of join keys in the true database”. Please see the below table for a comparison between Elastic Sensitivity with other DP mechanisms - we see Elastic Sensitivity supports different types of equijoins, which "are joins that are conditioned on value equality of one column from both relations."
 
-<img src="https://lh5.googleusercontent.com/-UMB6w6XmQNrGoXobcn4Mo1mzDFD27ymYVnuWwDKCBQMTYfXoyTuGFiioNHtKOhXIPtcsVxad9tT1vAycO5ULQoG34SloBxVuYZh5H3pbVUgbmIN3mebudaS-6BYiFjR2heT" width="500">
+<img src="https://lh5.googleusercontent.com/-UMB6w6XmQNrGoXobcn4Mo1mzDFD27ymYVnuWwDKCBQMTYfXoyTuGFiioNHtKOhXIPtcsVxad9tT1vAycO5ULQoG34SloBxVuYZh5H3pbVUgbmIN3mebudaS-6BYiFjR2heT" width="500" align="center">
 
 
 The authors demonstrate FLEX, a system that utilizes elastic sensitivity, depicted in the figure below. Here are the benefits described in the paper:
@@ -81,7 +83,7 @@ The authors demonstrate FLEX, a system that utilizes elastic sensitivity, depict
 - Only requires static analysis of the query and post-processing of the query results.
 - Scales to big data while incurring minimal performance overhead.
 
-<img src="https://lh4.googleusercontent.com/RPzHz--3UOg57AP8ucmvBvTsBEsuMGsU7bY8e4CyADltqN1d0BTXaVyFNwoQd77DGnkmszTrQib1Mr-Zr6OzcQwcO2_8mbF4XcaHqKOz8NKWDi2nsdHpTBfDTulzmGrHoJIB" width="500">
+<img src="https://lh4.googleusercontent.com/RPzHz--3UOg57AP8ucmvBvTsBEsuMGsU7bY8e4CyADltqN1d0BTXaVyFNwoQd77DGnkmszTrQib1Mr-Zr6OzcQwcO2_8mbF4XcaHqKOz8NKWDi2nsdHpTBfDTulzmGrHoJIB" width="500" align="center">
 
 
 
@@ -91,7 +93,7 @@ Let's now turn to a healthcare application involving wearable technology and the
 
 In the system pipeline described in the corresponding paper, data is perturbed using Local Differential Privacy, where the data contributor adds noise. Per the pipeline shown below, the user's smart watch identifies salient points in the data streams and then perturbs them with noise, followed by sending the noisy data to the server for reconstruction and storage.
 
-<img src="https://lh6.googleusercontent.com/X93uPa9za6kNKEPjejKsQHWMLX7w96gW1yLEj_xERkMiEDrD147G6Fk2buFBtEu2xhMaHahm-5FV8zDwp1RJFaYAywhNlLOBDMXYQzYbdYuSvTWYx8x0XECi7k7WHHMAXprw" width="500">
+<img src="https://lh6.googleusercontent.com/X93uPa9za6kNKEPjejKsQHWMLX7w96gW1yLEj_xERkMiEDrD147G6Fk2buFBtEu2xhMaHahm-5FV8zDwp1RJFaYAywhNlLOBDMXYQzYbdYuSvTWYx8x0XECi7k7WHHMAXprw" width="500" align="center">
 
 
 #### Biomedical Dataset Analysis
@@ -102,7 +104,7 @@ As demonstrated in the below figure, DAMSEN <sup id="a4">[4](#f4)</sup> offers d
 
 Note: In the context of data analysis tasks apropos queries, histograms do not represent the traditional visualization of the data distribution. Histograms are a special type of query that involves sorting data points into buckets <sup id="a11">[11](#f11)</sup>. You can think of such queries as similar to Pandas' groupby() function with more functionality. A cuboid is an analysis task that involves multiply summary datasets and tables - please see the DAMSEN paper <sup id="a4">[4](#f4)</sup> for detailed examples.
 
-<img src="https://lh3.googleusercontent.com/A9sHW1JNxeN-Tb4kDmyJlm6lTPmtYDfKIvwbIlW_YJbGPLZvTQbBkmVEWr3FqTS6Suj7OGoIMcOUF-srj2DN7gihQHs8pFhK_qFtLlRTkpqAXiN8sOFVKv6HfH-MdRM93f-p9v0-hfE" width="5000">
+<img src="https://lh3.googleusercontent.com/A9sHW1JNxeN-Tb4kDmyJlm6lTPmtYDfKIvwbIlW_YJbGPLZvTQbBkmVEWr3FqTS6Suj7OGoIMcOUF-srj2DN7gihQHs8pFhK_qFtLlRTkpqAXiN8sOFVKv6HfH-MdRM93f-p9v0-hfE" width="5000" align="center">
 
 **Potential Project Idea:** Ensure differential privacy guarantees for visualizations. Two resources I have found on the topic are ["Privacy-aware Visualization of Personal Data"](<https://users.cs.duke.edu/~hexi88/privacy-aware_visualization/index.html>) <sup id="a12">[12](#f12)</sup> and ["Challenges of Visualizing Differentially Private Data"](<https://people.cs.umass.edu/~miklau/assets/pubs/viz/zhang16challenges.pdf>) <sup id="a13">[13](#f13)</sup>.
 
@@ -116,19 +118,19 @@ It is important to reduce the amount of noise because we would like to ensure th
 
 For this use case, we consider DP-perturbed histograms with Homomorphic Encryption <sup id="a10">[10](#f10)</sup>. The overall system proposed in the paper <sup id="a10">[10](#f10)</sup> is depicted in the figure below:
 
- <img src="https://lh5.googleusercontent.com/78E7aRmA9KiMjJxwk_H7JRmi-u_wny-0CixOgHAmai3UuMDbsA9i4wWEQyJf_nBQ_paBsXcg4_oz2mR6hhPoeZhWDICQb4CJoKatUiquNvsU8CgInijJLHzLP7Gm6wWZtXh6OeM066s" width="500">
+ <img src="https://lh5.googleusercontent.com/78E7aRmA9KiMjJxwk_H7JRmi-u_wny-0CixOgHAmai3UuMDbsA9i4wWEQyJf_nBQ_paBsXcg4_oz2mR6hhPoeZhWDICQb4CJoKatUiquNvsU8CgInijJLHzLP7Gm6wWZtXh6OeM066s" width="500" align="center">
 
 We can see the system involves researchers, trusted third parties, and cloud service providers as entities that each have their own specific roles in the framework.
 
 The concept of the proposed framework is depicted in the below figure. We can see the parts of the framework required for the homomorphic encryption components for key dissemination and the secure histogram generation. In terms of the DP part of the framework, the system adds encrypted Laplace noises to the count of each bin of the histogram, where the sensitive of histogram computation is 1. 
 
-<img src="https://lh3.googleusercontent.com/agYpptdhWRzYSmBhf_cT0JM-NxQhtX1tFvLwE5wXYrOLQReucWNz5kq_YubSR_isl95qzC09xEt6dLMIbcwQexiXNxBeQ3RYtih0dUIOkK7l5ra0DuwLIB1VmG2Zsr-WkVwj_z-pfIA" width="5008">
+<img src="https://lh3.googleusercontent.com/agYpptdhWRzYSmBhf_cT0JM-NxQhtX1tFvLwE5wXYrOLQReucWNz5kq_YubSR_isl95qzC09xEt6dLMIbcwQexiXNxBeQ3RYtih0dUIOkK7l5ra0DuwLIB1VmG2Zsr-WkVwj_z-pfIA" width="5008" align="center">
 
 As mentioned previously, histograms are a type of query and the results can be used to train models. 
 
 As shown in the below figure, the authors found that while the classifier trained on the raw dataset achieved the highest performance, the authors' classifier trained on the dataset sampled based DP-perturbed V-optimal histogram performed similar to the classifier trained on the dataset sampled based on the noise-free V-optimal histogram. The exception for this finding occurred when the privacy budget was reduced to less than 0.1, which led to large amounts of noise added to the data and a drop in the AUC and increase in the query missing rate. 
 
-<img src="https://lh5.googleusercontent.com/4aGDWvNsnsk7S-fPFWm33xWrGhIus7nxADs8kHMSeIbsffMvXtZJJapQokzUdTmbrohAhF-iO3MuxpXsFEl9Nqy7SkwzfRQLwgFZGYLK1XNaPyyCkZE14TZ86UrA9R0eYOeKDPMrF6M" width="5008">
+<img src="https://lh5.googleusercontent.com/4aGDWvNsnsk7S-fPFWm33xWrGhIus7nxADs8kHMSeIbsffMvXtZJJapQokzUdTmbrohAhF-iO3MuxpXsFEl9Nqy7SkwzfRQLwgFZGYLK1XNaPyyCkZE14TZ86UrA9R0eYOeKDPMrF6M" width="5008" align="center">
 
 Therefore, one of the authors' conclusion is that the privacy budget needs to be carefully chosen. They also explain that their security model prevents against various leakages in terms of information exchange between the entities discussed - please see the paper for more details.
 
@@ -136,13 +138,13 @@ Therefore, one of the authors' conclusion is that the privacy budget needs to be
 
 Microsoft's PrivTree system <sup id="a6">[6](#f6)</sup> utilizes differential privacy to mask the location of individuals in their geolocation databases. The approach involves  the partitioning of a map into sub-regions, followed by applying location perturbation to each sub-region, as demonstrated in the figures below. Their system, given the original data and a few other parameters (the scale of Laplacian noise to be used, a threshold used to decide whether the splitting of a node should occur, etc.), can implement a differentially private algorithm and output noisy data for almost any kind of location data.
 
-<img src="https://lh5.googleusercontent.com/LL0LO0k61C8wG5PrrsMU1QCJiNswIdAlFPYwXmggSIlnTjyCEEXIl4-m31NEoJ4hcuhYvnzV_PgD25PgDpMKBLs8IPJqLbWwWq_p295jOabRC8hTh3BS_zq4_M_UZJDor5RenVWiQBU" width="5008">
+<img src="https://lh5.googleusercontent.com/LL0LO0k61C8wG5PrrsMU1QCJiNswIdAlFPYwXmggSIlnTjyCEEXIl4-m31NEoJ4hcuhYvnzV_PgD25PgDpMKBLs8IPJqLbWwWq_p295jOabRC8hTh3BS_zq4_M_UZJDor5RenVWiQBU" width="5008" align="center">
 
 #### U.S. Census Bureau
 
 An interesting use case that we will only cover briefly is the U.S. Census Bureau's decision to incorporate differential privacy as part of their privacy strategy <sup id="a7">[7](#f7)</sup>, <sup id="a8">[8](#f8)</sup>. Per the figure below, they intend to adopt differential privacy through the "world's first large-scale application of new privacy system" in 2020.
 
-<img src="https://lh3.googleusercontent.com/cZ9ChFF9jvBqd4jRN2G8oVV0Eel9vGwTYMhoow8DOvsXOCkxX0vSIiSxkCzQJBOCqlWOxEe_e0tIR8H0700Pi9LpnDrwDkdjYwa8kbiBrysZKpVW5WgJ-xxzRDC7ch3nmq4URh3YhJY" width="5008">
+<img src="https://lh3.googleusercontent.com/cZ9ChFF9jvBqd4jRN2G8oVV0Eel9vGwTYMhoow8DOvsXOCkxX0vSIiSxkCzQJBOCqlWOxEe_e0tIR8H0700Pi9LpnDrwDkdjYwa8kbiBrysZKpVW5WgJ-xxzRDC7ch3nmq4URh3YhJY" width="5008" align="center">
 
 #### DP Research Challenges
 
