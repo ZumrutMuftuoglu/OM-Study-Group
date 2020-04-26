@@ -18,13 +18,18 @@ Thank you Professor [Joseph Near](https://github.com/jnear) for sharing your not
 - [PhD Thesis of Naoise Holohan: Mathematical Foundations of Differantial Privacy](https://github.com/ZumrutMuftuoglu/OM-Study-Group/blob/master/Mathematical%20Foundations%20of%20DP.pdf)
 - [Udacity course: Secure & Private AI](https://www.udacity.com/course/secure-and-private-ai--ud185)
 - [Intro to DP Presentation by @Zumi-12/04/20](https://github.com/ZumrutMuftuoglu/OM-Study-Group/blob/master/OM_Differential%20Privacy_intro_presentation.pdf)
--[Use cases of Differential Privacy and Federated Learning by @Ria](https://docs.google.com/presentation/d/15Mzb0mGKrBSDULTuha-TXHp-rdHppLi8MQGTuiwfKlU/edit?usp=sharing)
+- [Use cases of Differential Privacy and Federated Learning by @Ria](https://docs.google.com/presentation/d/15Mzb0mGKrBSDULTuha-TXHp-rdHppLi8MQGTuiwfKlU/edit?usp=sharing)
+- [Differential_Privacy_Toolkit_Idea](https://docs.google.com/document/d/1bLTjOJ5MRm1HUwNW4b89pZsCLb6l1yQjt4ztwCe8qNk/edit?usp=sharing)
 
 ## Secure & Private AI Google Colab notebooks by @Ria
 - [Udacity course DP Session 1 notebook](https://colab.research.google.com/drive/14RcH3BjdzVj7Y8YNsXkY97mRZLkyXUgv)
 - [Udacity course DP Session 1 Completed notebook](https://colab.research.google.com/drive/1dmoz1iv5MhY4d1LIgxqE-THzm_CfBxMl)
 - [Udacity course FL Session 2 notebook](https://colab.research.google.com/drive/1is55otRFTfSI7Kg-haZ3IJGew2SjrkP6)
 - [Udacity course FL Session 2 completed notebook](https://colab.research.google.com/drive/1SMPdbG6-uuAPf9yoc3cq9E0JyH2H3IUg)
+
+## Blog
+- [SG OpenMined Explorers Blog](https://zumrutmuftuoglu.github.io/OM-Study-Group/)
+- [Blog schedule](https://docs.google.com/spreadsheets/d/1EGd8zXEbs3utFndym0C8LaTFAmJ1Fc_PS8Ycy5_lVgQ/edit?usp=sharing)
 
 ## Topics to discuss
 - [Add topics to discuss in this document](https://docs.google.com/document/d/1W9LGurrVzNxkqCydo9jgXOsaAWC85_1JLy0n5Td1hhE/edit?usp=sharing)
