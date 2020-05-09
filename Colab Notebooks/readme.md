@@ -6,3 +6,4 @@
 
 
 ## Pysyft Tutorials Google Colab notebooks by @Archana
+- [Part 01 - The Basic Tools of Private Deep Learning notebook](https://colab.research.google.com/drive/1Au-8y4LfMh6lWpe1x0u0V0EhEynQcmjn)
