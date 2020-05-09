@@ -17,7 +17,7 @@ Thank you Professor [Joseph Near](https://github.com/jnear) for sharing your not
 - [Book: Differantial Privacy and Applications](https://github.com/ZumrutMuftuoglu/OM-Study-Group/blob/master/DP%20And%20Applications.pdf)
 - [PhD Thesis of Naoise Holohan: Mathematical Foundations of Differantial Privacy](https://github.com/ZumrutMuftuoglu/OM-Study-Group/blob/master/Mathematical%20Foundations%20of%20DP.pdf)
 - [Udacity course: Secure & Private AI](https://www.udacity.com/course/secure-and-private-ai--ud185)
-- [Intro to DP Presentation by @Zumi-12/04/20](https://github.com/ZumrutMuftuoglu/OM-Study-Group/blob/master/OM_Differential%20Privacy_intro_presentation.pdf)
+- [Intro to DP Presentation by @Zumi](https://github.com/ZumrutMuftuoglu/OM-Study-Group/blob/master/OM_Differential%20Privacy_intro_presentation.pdf)
 - [Use cases of Differential Privacy and Federated Learning by @Ria](https://docs.google.com/presentation/d/15Mzb0mGKrBSDULTuha-TXHp-rdHppLi8MQGTuiwfKlU/edit?usp=sharing)
 - [Differential_Privacy_Toolkit_Idea](https://docs.google.com/document/d/1bLTjOJ5MRm1HUwNW4b89pZsCLb6l1yQjt4ztwCe8qNk/edit?usp=sharing)
 
