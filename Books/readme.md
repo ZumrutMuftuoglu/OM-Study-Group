@@ -1,1 +1,4 @@
-
+- [Book: The Algorithmic Foundations of Diﬀerential](https://github.com/ZumrutMuftuoglu/OM-Study-Group/blob/master/privacybook.pdf)
+- [Book: Differential Privacy From Theory to Practice](https://github.com/ZumrutMuftuoglu/OM-Study-Group/blob/master/Differential%20Privacy%20from%20Theory%20to%20Pratice.pdf)
+- [Book: Differantial Privacy and Applications](https://github.com/ZumrutMuftuoglu/OM-Study-Group/blob/master/DP%20And%20Applications.pdf)
+- [PhD Thesis of Naoise Holohan: Mathematical Foundations of Differantial Privacy](https://github.com/ZumrutMuftuoglu/OM-Study-Group/blob/master/Mathematical%20Foundations%20of%20DP.pdf)
