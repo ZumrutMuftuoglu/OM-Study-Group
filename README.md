@@ -26,6 +26,12 @@ Thank you Professor [Joseph Near](https://github.com/jnear) for sharing your not
 - [Udacity course DP Session 1 Completed notebook](https://colab.research.google.com/drive/1dmoz1iv5MhY4d1LIgxqE-THzm_CfBxMl)
 - [Udacity course FL Session 2 notebook](https://colab.research.google.com/drive/1is55otRFTfSI7Kg-haZ3IJGew2SjrkP6)
 - [Udacity course FL Session 2 completed notebook](https://colab.research.google.com/drive/1SMPdbG6-uuAPf9yoc3cq9E0JyH2H3IUg)
+- [Udacity course FL Session 3 notebook](https://colab.research.google.com/drive/1CZ85gmg-v0ds7jHazBuotL9jdReeeu9l?usp=sharing)
+- [Udacity course FL Session 3 completed notebook](https://colab.research.google.com/drive/1Jz0-yTK90hUG1CiIzTFfsJuuWULeJI2e?usp=sharing)
+- [Udacity course FL Session 4 notebook](https://colab.research.google.com/drive/1V5F6om8x5fwqEwfAFns6yocl1nHesh9C?usp=sharing)
+- [Udacity course FL Session 4 completed notebook](https://colab.research.google.com/drive/1A5BY8NpznzWyh4FLcf3CKfdUElX8Q_Qm?usp=sharing)
+- [Udacity course FL Session 4b notebook](https://colab.research.google.com/drive/1g7-w4MQ61C3FRNaWqSr3D9QYe0F5Ps9f?usp=sharing)
+- [Udacity course FL Session 4b completed notebook](https://colab.research.google.com/drive/1EsUdd8Of6jjEsnIF88LSoUzoR37rqnWT?usp=sharing)
 
 ## Blog
 - [SG OpenMined Explorers Blog](https://zumrutmuftuoglu.github.io/OM-Study-Group/)
