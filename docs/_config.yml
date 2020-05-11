@@ -17,9 +17,15 @@ authors:
     avatar: 'assets/images/ria.jpg'
     web: https://github.com/riacheruvu
     description: "AI Research Engineer intern at Intel and graduate student at Harvard University studying data science."
+  ivoline:
+    name: Ivy
+    display_name: Ivoline Ngong
+    avatar: 'assets/images/ivy.png'
+    web: https://ivyclare.github.io/
+    description: "Independent Consultant at Udacity and Graduate Student In Computer Engineering"
   john:
     name: John
-    display_name: John    
+    display_name: John
     gravatar: b1cc14991db7a456fcd761680bbc8f81
     email: wowthemesnet@gmail.com
     web: https://www.wowthemes.net
@@ -33,7 +39,7 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-archives
-    
+
 # Archives
 jekyll-archives:
   enabled:
@@ -41,11 +47,11 @@ jekyll-archives:
   layout: archive
   permalinks:
     category: '/category/:name/'
-    
-# Pagination 
+
+# Pagination
 paginate: 6
 paginate_path: /page:num/
-    
+
 # Other
 markdown: kramdown
 
