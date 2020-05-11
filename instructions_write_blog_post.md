@@ -25,7 +25,10 @@ For more advanced "special effects" in your post: If you'd like to add in specia
 
 5. Once you're finished writing your blog post, head over to docs/config.yaml. Copy over one of the authors sections (e.g. Ria or John), and edit them with your information. You can add in a picture of yourself if you'd like, and a link to your websites and your email.
 
+Note: If you're interested in seeing what your blog post would look like before making the pull request to the main repo: In your forked repo, go to the Settings tab, scroll down to the GitHub Pages section, and enable the blog from /docs option - you should then be able to see your own blog post with the link provided. 
+
 6. Now that you've finished writing your post and filled in your author information, it's time to make a pull request to publish your post! git add, commit, and push your changes to your fork repo and then submit your pull request (Github should automatically suggest this-check the tutorial above for the detailed instructions if stuck). The creator/contributors to the repo will then review your pull request, and merge it if everything is ok! We will fhen notify you that your pull request has been merged, so you can then check to see that your article is up on the page.
+
 
 If you're having any trouble with these steps (e.g. your changes aren't showing up), please make a post in the #sg-om-explorers channel, and we'll help you fix the issue!
 
