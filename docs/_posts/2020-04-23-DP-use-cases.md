@@ -4,7 +4,6 @@ title:  "Use Cases of Differential Privacy"
 author: ria
 categories: [ differential-privacy, application ]
 image: assets/images/uber-use-case.jpg
-featured: true
 ---
 
 Hello! In this blog post, we will cover use cases of differential privacy (DP) ranging from biomedical dataset analysis to geolocation. For the slide deck associated with this post, please see [Use cases of Differential Privacy and Federated Learning by @Ria](https://docs.google.com/presentation/d/15Mzb0mGKrBSDULTuha-TXHp-rdHppLi8MQGTuiwfKlU/edit?usp=sharing). 
