@@ -4,6 +4,7 @@ title:  "Detecting an Invisible Enemy With Invisible Data!"
 author: ivy
 categories: [ differential-privacy ]
 image: assets/images/covid2.jpg
+featured: true
 ---
 
 ### Detecting COVID19 through Differential Privacy
