@@ -28,7 +28,7 @@ The solution to our problem lies in a privacy preserving method called different
 Differential privacy is a notion of privacy that was introduced by Cynthia Dwork et al.[1](https://link.springer.com/chapter/10.1007/11681878_14) which ensures that statistical analysis does not compromise privacy.
 It makes sure that the effect that an individual's data has on the overall model output is limited. In other words, the output of an algorithm is pretty much the same, with or without the data of a specific individual in the dataset.
 
-<img src="../assets/images/13.jpg" width="650" align="center">
+<img src="../assets/images/john.png" width="650" align="center">
 [Source](http://www.cleverhans.io/privacy/2018/04/29/privacy-and-machine-learning.html)
 
 As can be seen in the image above, John's information is present in the first dataset and absent in the second but the model output is the same. The intuition here is that an adversary who wants to get John's data can't determine whether or not John is present in the dataset - let alone the contents of his data. Hence, John's privacy is guaranteed.
@@ -124,7 +124,7 @@ Now, we have to organize the project.
 
 Create a **data** directory on your google drive and upload these 2 folders into this directory. Now, rename the **Images_Processed** folder to **images** and the **Data_Split** folder to **labels**.  At the end, your data directory, should look like the this:
 
-<img src="/docs/assets/images/fileStructure.png" width="650" align="center">
+<img src="../assets/images/fileStructure.png" width="650" align="center">
 
 
 ### Step 2: Create Teacher and Student Datasets
@@ -280,7 +280,7 @@ for ii in range(5):
 
 Our output is:
 
-<img src="/docs/assets/images/viz.png" width="650" align="center">
+<img src="../assets/images/viz.png" width="650" align="center">
 
 We can now move on to partitioning the training set among the different hospitals. We have 5 hospitals and therefore we have 5 teachers. **One important thing to note here is that the datasets have to be disjoint**. That is, no 2 datasets should have overlapping training examples. As mentioned earlier, differential privacy states that if an individual's data is removed from a dataset, the output of the dataset remains the same because that individual was not contributing to the dataset. Imagine we have duplicates of the same individual’s data, even if we remove one of the duplicates, the individual's data is still contributing to the output and therefore differential privacy can’t work in this case,as we cannot preserve the privacy of that individual.
 
@@ -681,7 +681,7 @@ test(dataloader, normal_model, criterion, True)
 ```
 
 And here's our final out:
-<img src="/docs/assets/images/results.png" width="650" align="center">
+<img src="../assets/images/results.png" width="650" align="center">
 
 
 We take our model from an accuracy of 65% to an accuray of 61% but save many lives in the process without sacrificing privacy. Don't you think this is worth the sacrifice? I do.
