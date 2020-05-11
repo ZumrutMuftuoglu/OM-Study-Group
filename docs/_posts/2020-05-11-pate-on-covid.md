@@ -5,7 +5,7 @@ author: Ivy
 categories: [ differential-privacy ]
 image: assets/images/13.jpg
 ---
-# Detecting an Invisible Enemy With Invisible Data!
+
 ### Detecting COVID19 through Differential Privacy
 
 Imagine you work as a DL researcher in a hospital and your job is to find ways to assist doctors in their fight against diseases. Due to the coronavirus (the invisible enemy) pandemic, there is a growing number of patients and a pool of CT images waiting to be diagnosed. You decide to create an image classifier, which would not only reduce the burden on clinicians and help them make more informed decisions, but also lead to faster diagnosis and potentially save lives. However, there is a challenge; your CT Images are not labelled.
@@ -28,14 +28,14 @@ The solution to our problem lies in a privacy preserving method called different
 Differential privacy is a notion of privacy that was introduced by Cynthia Dwork et al.[1](https://link.springer.com/chapter/10.1007/11681878_14) which ensures that statistical analysis does not compromise privacy.
 It makes sure that the effect that an individual's data has on the overall model output is limited. In other words, the output of an algorithm is pretty much the same, with or without the data of a specific individual in the dataset.
 
-<img src="assets/images/13.jpg" width="650" align="center">
+<img src="/assets/images/13.jpg" width="650" align="center">
 [Source](http://www.cleverhans.io/privacy/2018/04/29/privacy-and-machine-learning.html)
 
 As can be seen in the image above, John's information is present in the first dataset and absent in the second but the model output is the same. The intuition here is that an adversary who wants to get John's data can't determine whether or not John is present in the dataset - let alone the contents of his data. Hence, John's privacy is guaranteed.
 
 Differential privacy typically works by adding statistical noise either at the input level (local differential privacy) or the output level (global differential privacy) of the model or statistical query. The addition of noise guarantees that individual user contributions are concealed but at the same time we gain insights into the overall population without sacrificing privacy. The amount of noise added is dependent on a parameter called the **privacy budget**  which is often denoted by epsilon (ε). The smaller the value of epsilon is (i.e more noise added), the higher the privacy it provides and vice versa. As shown in the image below, we can see that as more noise is added to the face image, the more anonymous it gets but the less useful it becomes. Hence, choosing the right epsilon value is very important.
 
-<img src="assets/images/ trade-off.jpg" width="650" align="center">
+<img src="/assets/images/trade-off.jpg" width="650" align="center">
 [Source](https://aircloak.com/explaining-differential-privacy/)
 
 
@@ -345,7 +345,7 @@ student_valid_loader = DataLoader(student_valid_subset, batch_size=batch_size, s
 len(student_train_loader), len(student_valid_loader)
 ```
 
-##3 Step 3: Train Teachers
+### Step 3: Train Teachers
 
 Now that our student and teacher datasets are ready, each hospital can train their data to create 5 different models.
 
