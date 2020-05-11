@@ -1,9 +1,9 @@
 ---
 layout: post
 title:  "Detecting an Invisible Enemy With Invisible Data!"
-author: Ivy
+author: ivy
 categories: [ differential-privacy ]
-image: assets/images/13.jpg
+image: assets/images/covid.jpg
 ---
 
 ### Detecting COVID19 through Differential Privacy
@@ -83,7 +83,7 @@ PySyft is an open-source framework created by OpenMined that enables secure, pri
 !pip install syft
 ```
 
-```
+```python
 # import our libraries
 import numpy as np
 import pandas as pd
@@ -106,7 +106,7 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 Our dataset will be uploaded to google drive, hence we have to get authorized access. After getting access, we navigate to our project directory using `cd`
 
-```
+```python
 ## authorize access to google drive
 from google.colab import drive
 drive.mount('/content/drive')
@@ -124,7 +124,7 @@ Now, we have to organize the project.
 
 Create a **data** directory on your google drive and upload these 2 folders into this directory. Now, rename the **Images_Processed** folder to **images** and the **Data_Split** folder to **labels**.  At the end, your data directory, should look like the this:
 
-<img src="../assets/images/fileStructure.png" width="650" align="center">
+<img src="../assets/images/structure.png" width="650" align="center">
 
 
 ### Step 2: Create Teacher and Student Datasets
@@ -136,14 +136,15 @@ We will use the train set as training dataset for the teachers, the test dataset
 
                                                       | Dataset            | Used For                  |
                                                       |--------------------|---------------------------|
-                                                      | Train Dataset      | Teacher Training Datasets |
+                                                      | Train Dataset      |  Teacher Training Datasets |
                                                       | Test Dataset       |  Student Dataset          |
-                                                      | Validation Dataset | Testing Model Performance |
+                                                      | Validation Set     |  Testing Model Performance |
                                                       |                    |                           |
+
 
 Time to load the train, validation and test datasets. We start by creating a custom dataset loader, create the data transforms and finally load the datasets.
 
-```
+```python
 # Custom dataset
 #from https://github.com/UCSD-AI4H/COVID-CT/blob/master/baseline%20methods/DenseNet169/DenseNet_predict.py
 class CovidCTDataset(Dataset):
@@ -199,7 +200,7 @@ def read_txt(txt_path):
     return txt_data
 
 ```
-```
+```python
 batchsize=16
 path = './data/images'
 
@@ -236,7 +237,7 @@ len(trainset), len(testset), len(validset)
 
 We have successfully loaded our data, now let's visualize the data and labels.
 
-```
+```python
 data_loader = DataLoader(trainset, batch_size=batchsize, shuffle=True)
 
 import matplotlib.pyplot as plt
@@ -288,7 +289,7 @@ So, when partitioning the training data into subsets, we have to be very cautiou
 
 Next, we are going to partition our train set between the 5 teachers/hospitals and create trainloaders and validation loaders for each of these 5 teachers.
 
-```
+```python
 # TEACHERS
 #divide train set among teachers and create dataloaders for valid and trainsets
 num_teachers = 5
@@ -331,7 +332,7 @@ len(trainloaders), len(validloaders)
 
 Notice that we now have 5 trainloaders and 5 validation loaders for our teachers. Now, we create the train and validation loaders for the student (our hospital).
 
-```
+```python
 #  # STUDENT
 # split into train and validation set
 valid_size = int(len(testset) * 0.2)
@@ -351,7 +352,7 @@ Now that our student and teacher datasets are ready, each hospital can train the
 
 We begin by defining a simple CNN model that will be used by both the teachers and students for training.
 
-```
+```python
 class SimpleCNN(torch.nn.Module):
     def __init__(self):
         super(SimpleCNN, self).__init__() # b, 3, 32, 32
@@ -375,7 +376,7 @@ class SimpleCNN(torch.nn.Module):
 ```
 Then, we define our training loop. We will not save the teacher models as they will not be useful to us after we have generated our student labels. Also, this will ensure that no copies of the models exist.
 
-```
+```python
 def train(n_epochs, trainloader, validloader, model, optimizer, criterion, use_cuda, save_path= None, is_not_teacher=False):
     """returns trained model"""
     # # initialize tracker for minimum validation loss
@@ -444,7 +445,7 @@ def train(n_epochs, trainloader, validloader, model, optimizer, criterion, use_c
 
 Now, we define our hyperparameters. We will be using CrossEntropyLoss and the Adam optimizer. We'll also train each teacher for 50 epochs.
 
-```
+```python
 # instantiate model and move it to GPU if available
 model = SimpleCNN()
 model.to(device)
@@ -457,7 +458,7 @@ epochs = 50
 
 Finally, we are ready to train our teacher models.
 
-```
+```python
 # Training teachers
 teacher_models = []
 i = 1
@@ -472,7 +473,7 @@ for trainloader, validloader in zip(trainloaders, validloaders):
 
 Teachers have finished training and we have 5 teacher models. We can use the models to generate labels for our hospital. Each of the 5 models model will generate one label for each image in our dataset. Therefore, we expect to have 5 generated labels for each image in our hospital dataset.
 
-```
+```python
 # get private labels
 def student_train_labels(teacher_models, dataloader):
   student_labels = []
@@ -513,7 +514,7 @@ This is called global differential privacy as we are adding noise only after the
 
 We define an `add_noise()` method, which takes as input the predicted labels and a value for epsilon (ε). We can control the amount of noise we add using epsilon.
 
-```
+```python
 # Get private labels with the most votes count and add noise them
 def add_noise(predicted_labels, epsilon=0.1):
   noisy_labels = []
@@ -540,7 +541,7 @@ def add_noise(predicted_labels, epsilon=0.1):
   print(labels_with_noise.shape)
 ```
 Our final labels are
-```
+```python
 [1 1 0 0 0 0 0 0 0 1 0 1 0 0 1 1 0 1 1 0 0 1 1 0 1 1 0 0 1 1 0 0 0 1 0 1 1
  0 0 0 1 1 0 0 0 0 1 0 0 0 0 0 1 0 1 0 0 0 1 0 0 0 0 1 0 0 0 1 1 0 0 0 1 0
  1 0 0 0 0 0 0 0 1 0 0 1 1 0 0 0 0 0 1 1 1 0 0 0 0 0 0 1 0 1 0 1 1 0 1 0 0
@@ -552,7 +553,7 @@ Our final labels are
 
 We can save these labels to a file and then discard the teacher models.
 
-```
+```python
 #write to csv file
 import csv
 def write_csv(data):
@@ -573,7 +574,7 @@ The data independent epsilon shows the maximum amount of information that can be
 
 
 After experimenting with different values of epsilon and the `noise_eps` variable, we decide to go with an epsilon value of 0.1 and we get a data dependent epsilon of 15.536462732485106 and a data independent epsilon of 1536462732485116. You can see this by running the cell:
-```
+```python
 # Performing PATE analysis
 data_dep_eps, data_ind_eps = pate.perform_analysis(teacher_preds=predicted_labels.T, indices=labels_with_noise_exp, noise_eps=0.1, delta=1e-5)
 print('Data dependent epsilon:', data_dep_eps)
@@ -584,7 +585,7 @@ print('Data independent epsilon:', data_ind_eps)
 
 Now that we have our noisy labels from the teachers, we can proceed to train our hospital data (i.e the student). Before training the model, we have to replace the old student dataloader, which contained the original labels from the dataset we downloaded, with the new labels from our teachers.  Remember that in a real life scenario, we do not have the original labels.
 
-```
+```python
 # We have to create a new training dataloader for the student with the newly created
 # labels with noise. We have to replace the old labels with the new labels
 def new_student_data_loader(dataloader, noisy_labels, batch_size=32):
@@ -603,7 +604,7 @@ len(labeled_student_trainloader),len(student_valid_loader)
 ```
 Next, we train the student model. We use the newly labelled trainloader for training and use the validloader’s dataset to evaluate the performance of our model. We use the same CNN model and hyperparameters that were used to train the teachers. In this case however, we save the student model, because this is the model that will be deployed.
 
-```
+```python
 student_model = train(epochs, labeled_student_trainloader, student_valid_loader, model, optimizer, criterion, True, save_path='./models/student.pth.tar', is_not_teacher=True)
 
 ```
@@ -612,7 +613,7 @@ student_model = train(epochs, labeled_student_trainloader, student_valid_loader,
 
 For the sake of comparison, we train a normal model with the original labels. This model does not implement privacy in any way.
 
-```
+```python
 # Normal DL Training
 normal_model = train(epochs, student_train_loader, student_valid_loader, model, optimizer, criterion, True, save_path='./models/normal.pth.tar', is_not_teacher=True)
 
@@ -622,14 +623,14 @@ normal_model = train(epochs, student_train_loader, student_valid_loader, model, 
 
 Now, we compare the performance of our privacy preserving student model and the normal deep learning model on the test dataset. Both models have never seen the data on in the testset before and they were both trained using the same model and hyperparameters.
 
-```
+```python
 # Create a dataloader for the test Dataset
 batch_size=16
 print(len(validset))
 dataloader = DataLoader(validset, batch_size=batchsize, shuffle=False)
 
 ```
-```
+```python
 # We set a seed for the dataset to prevent it from producing different values every time it is run
 seed = 3
 random.seed(seed)
@@ -681,7 +682,7 @@ test(dataloader, normal_model, criterion, True)
 ```
 
 And here's our final out:
-<img src="../assets/images/results.png" width="650" align="center">
+<img src="../assets/images/result.png" width="650" align="center">
 
 
 We take our model from an accuracy of 65% to an accuray of 61% but save many lives in the process without sacrificing privacy. Don't you think this is worth the sacrifice? I do.
