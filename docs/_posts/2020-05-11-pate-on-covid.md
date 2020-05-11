@@ -134,12 +134,12 @@ In order to train the model in a differentially private manner, we need 2 main c
 We will use the train set as training dataset for the teachers, the test dataset will be used as the student's training dataset and the validation set will be used to test the performance of the student model and normal model (model that has been trained without differential privacy). This has been summarized in the table below:
 
 
-                                                      | Dataset            | Used For                  |
-                                                      |--------------------|---------------------------|
+                                                      | Dataset            | Used For                   |
+                                                      |--------------------|----------------------------|
                                                       | Train Dataset      |  Teacher Training Datasets |
-                                                      | Test Dataset       |  Student Dataset          |
+                                                      | Test Dataset       |  Student Dataset           |
                                                       | Validation Set     |  Testing Model Performance |
-                                                      |                    |                           |
+                                                      |                    |                            |
 
 
 Time to load the train, validation and test datasets. We start by creating a custom dataset loader, create the data transforms and finally load the datasets.
