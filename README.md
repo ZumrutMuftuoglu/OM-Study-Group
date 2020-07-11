@@ -4,7 +4,7 @@ This group aims to study and learn about differential privacy, federated learnin
 ## Study Group Om Explorers Blog
 Link to Study Group blog: https://zumrutmuftuoglu.github.io/OM-Study-Group/
 
-Please see instructions_write_blog_post.md in the repo on instructions on how to write a blog post on the Study Group blog.
+Please follow [this](https://github.com/ZumrutMuftuoglu/OM-Study-Group/blob/master/instructions_write_blog_post.md) link for instructions on how to write a blog post on the Study Group blog.
 
 ## Meetups
 **Next meetup:** Sunday July 12 at 7.30 pm CEST | 1.30 pm EDT |  10.30 am PDT | 11.00 pm IST | 5.30 pm GMT |
