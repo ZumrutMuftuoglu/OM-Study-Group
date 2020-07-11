@@ -10,6 +10,7 @@ Please see instructions_write_blog_post.md in the repo on instructions on how to
 **Next meetup:** Sunday July 12 at 7.30 pm CEST | 1.30 pm EDT |  10.30 am PDT | 11.00 pm IST | 5.30 pm GMT |
 
 **Topic:** Web & Mobile
+
 Information and tutorials upcoming week
 * [SwiftSyft](https://github.com/OpenMined/swiftsyft)
 * [KotlinSyft](https://github.com/OpenMined/kotlinsyft)
