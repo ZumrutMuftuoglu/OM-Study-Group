@@ -1,7 +1,7 @@
-# Study Group Om Explorers
+# Study Group OM Explorers
 This group aims to study and learn about differential privacy, federated learning and PySyft.
 
-## Study Group Om Explorers Blog
+## OM Explorers Blog
 Link to Study Group blog: https://zumrutmuftuoglu.github.io/OM-Study-Group/
 
 Please follow [this](https://github.com/ZumrutMuftuoglu/OM-Study-Group/blob/master/instructions_write_blog_post.md) link for instructions on how to write a blog post on the Study Group blog.
