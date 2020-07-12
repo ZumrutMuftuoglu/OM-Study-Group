@@ -7,13 +7,11 @@ Link to Study Group blog: https://zumrutmuftuoglu.github.io/OM-Study-Group/
 Please follow [this](https://github.com/ZumrutMuftuoglu/OM-Study-Group/blob/master/instructions_write_blog_post.md) link for instructions on how to write a blog post on the Study Group blog.
 
 ## Meetups
-**Next meetup:** Sunday July 12 at 7.30 pm CEST | 1.30 pm EDT |  10.30 am PDT | 11.00 pm IST | 5.30 pm GMT |
+**Next meetup:** Sunday July 26 at 7.30 pm CEST | 1.30 pm EDT |  10.30 am PDT | 11.00 pm IST | 5.30 pm GMT |
 
-**Topic:** Web & Mobile
-* [SwiftSyft](https://github.com/OpenMined/swiftsyft)
-* [KotlinSyft](https://github.com/OpenMined/kotlinsyft)
-* [syft.js](https://github.com/OpenMined/syft.js)
-* [Threepio](https://github.com/OpenMined/threepio)
+**Topic:** Paper Session
+* **Paper:** [Preserving Differential Privacy in Convolutional Deep Belief Networks](https://paperswithcode.com/paper/preserving-differential-privacy-in)
+* **Target:** Implement the [code](https://github.com/haiphanNJIT/PrivateDeepLearning) (extra challenge is to impelement it in PyTorch)
 
 Invitation to the meetup can be found in our channel #sg_om_explorers 
 
